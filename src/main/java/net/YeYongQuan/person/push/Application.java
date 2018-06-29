@@ -17,7 +17,8 @@ public class Application extends ResourceConfig {
 
         // 注册Json解析器
         register(JacksonJsonProvider.class);
-//        注册打印类
+
+        // 注册打印类
         register(Logger.class);
     }
 }
