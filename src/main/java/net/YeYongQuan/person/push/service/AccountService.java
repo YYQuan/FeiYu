@@ -1,11 +1,13 @@
 package net.YeYongQuan.person.push.service;
 
 
-import net.YeYongQuan.person.push.bean.User;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import java.awt.*;
 
 @Path("/account")
 public class AccountService {
@@ -21,12 +23,23 @@ public class AccountService {
     @Path("/login")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public User post(){
-        User user = new User();
-        user.setName("YYQ");
-        user.setSex("man");
-        return  user;
+    public int post(){
+         SessionFactory sf = null;
+        try{
+            Configuration cfg = new Configuration().configure();
+            sf = cfg.buildSessionFactory();
+            Session session = sf.openSession();
+            System.out.println("能打开session，那就没错了");
+
+        }catch(HibernateException e){
+            e.printStackTrace();
+        }
+
+
+
+        return  19;
     }
+
 
 
 }

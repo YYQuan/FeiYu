@@ -8,7 +8,7 @@
         <!-- 数据库链接驱动 -->
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <!--链接地址用户名密码 -->
-        <property name="connection.url">jdbc:mysql://127.0.0.1:3306/DB_Fei_Yu_PUSH?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false</property>
+        <property name="connection.url">jdbc:mysql://127.0.0.1:3306/db_fei_yu?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false</property>
         <property name="connection.username">root</property>
         <property name="connection.password">123456</property>
 
@@ -56,12 +56,24 @@
         -->
 
 
+        <mapping package="net.YeYongQuan.person.push.bean.db"
+                 class="net.YeYongQuan.person.push.bean.db.User"/>
+        <mapping package="net.YeYongQuan.person.push.bean.db"
+                 class="net.YeYongQuan.person.push.bean.db.UserFollow"/>
+        <mapping package="net.YeYongQuan.person.push.bean.db"
+                 class="net.YeYongQuan.person.push.bean.db.Message"/>
+        <mapping package="net.YeYongQuan.person.push.bean.db"
+                 class="net.YeYongQuan.person.push.bean.db.Group"/>
+        <mapping package="net.YeYongQuan.person.push.bean.db"
+                 class="net.YeYongQuan.person.push.bean.db.GroupMember"/>
+        <mapping package="net.YeYongQuan.person.push.bean.db"
+                 class="net.YeYongQuan.person.push.bean.db.PushHistory"/>
+        <mapping package="net.YeYongQuan.person.push.bean.db"
+                 class="net.YeYongQuan.person.push.bean.db.Apply"/>
         <!--<mapping package="net.qiujuer.web.italker.push.bean.db"-->
         <!--class="net.qiujuer.web.italker.push.bean.db.Group"/>-->
         <!--<mapping package="net.qiujuer.web.italker.push.bean.db"-->
         <!--class="net.qiujuer.web.italker.push.bean.db.GroupMember"/>-->
-        <!--<mapping package="net.qiujuer.web.italker.push.bean.db"-->
-        <!--class="net.qiujuer.web.italker.push.bean.db.User"/>-->
         <!--<mapping package="net.qiujuer.web.italker.push.bean.db"-->
         <!--class="net.qiujuer.web.italker.push.bean.db.UserFollow"/>-->
         <!--<mapping package="net.qiujuer.web.italker.push.bean.db"-->

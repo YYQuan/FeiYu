@@ -21,4 +21,6 @@ public class Application extends ResourceConfig {
         // 注册打印类
         register(Logger.class);
     }
+
+
 }
