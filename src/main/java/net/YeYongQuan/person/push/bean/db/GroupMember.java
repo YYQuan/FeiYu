@@ -1,6 +1,7 @@
 package net.YeYongQuan.person.push.bean.db;
 
 
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -16,6 +17,12 @@ public class GroupMember {
     @Column(updatable = false,nullable = false)
     private String id;
 
+    @Column
+    private String alias;
+
+    @CreationTimestamp
+    @Column(nullable = false)
+    private LocalTime createAt = LocalTime.now();
 
     @JoinColumn(name = "groupId")
     @ManyToOne(optional = false)
@@ -23,8 +30,76 @@ public class GroupMember {
     @Column(nullable = false ,updatable = false,insertable = false)
     private String groupId;
 
-    @Column(nullable = false ,updatable = false,insertable = false)
-    private String targetId;
+    @Column(nullable = false)
+    private int notifyLevel;
 
-    private LocalTime createAt = LocalTime.now();
+    @Column(nullable = false)
+    private int permission;
+
+    @Column(nullable = false ,updatable = false,insertable = false)
+    private String userId;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getAlias() {
+        return alias;
+    }
+
+    public void setAlias(String alias) {
+        this.alias = alias;
+    }
+
+    public LocalTime getCreateAt() {
+        return createAt;
+    }
+
+    public void setCreateAt(LocalTime createAt) {
+        this.createAt = createAt;
+    }
+
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
+    }
+
+    public String getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(String groupId) {
+        this.groupId = groupId;
+    }
+
+    public int getNotifyLevel() {
+        return notifyLevel;
+    }
+
+    public void setNotifyLevel(int notifyLevel) {
+        this.notifyLevel = notifyLevel;
+    }
+
+    public int getPermission() {
+        return permission;
+    }
+
+    public void setPermission(int permission) {
+        this.permission = permission;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 }

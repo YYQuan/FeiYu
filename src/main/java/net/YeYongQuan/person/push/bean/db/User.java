@@ -24,44 +24,49 @@ public class User {
     @Column(updatable = false,nullable = false)
     private String id;
 
+    @CreationTimestamp
+    @Column(updatable = false,nullable = false)
+    private LocalTime createTime = LocalTime.now();
+
+    @Column
+    private String description;
+
+    @CreationTimestamp
+    @Column
+    private LocalTime lastReceiveTime;
+
 
     @Column(nullable = false, length = 128, unique = true)
     private String name;
+
+
+    @Column(nullable = false)
+    private String password;
 
     @Column(nullable = false, length = 64, unique = true)
     private String phoneNum;
 
     @Column
-    private String description;
+    private String  portrait;
 
-    @Column(nullable = false)
-    private String password;
 
-    @Column(nullable = false,unique =true)
-    private String token;
 
     @Column
     private String pushId;
 
-    @Column
-    private String  portrait;
+    @Column(nullable = false,unique =true)
+    private String token;
 
-    @Column
-    private int sex;
+    @Column(nullable = false)
+    private int sex = 0;
 
 
-
-    @CreationTimestamp
-    @Column(updatable = false,nullable = false)
-    private LocalTime createTime = LocalTime.now();
 
     @CreationTimestamp
     @Column(nullable = false)
     private LocalTime updateTime= LocalTime.now();
 
-    @CreationTimestamp
-    @Column
-    private LocalTime lastReceiveTime;
+
 
     @JoinColumn(name = "originUserId")
     @LazyCollection(LazyCollectionOption.EXTRA)

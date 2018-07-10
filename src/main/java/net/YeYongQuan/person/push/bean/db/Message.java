@@ -10,8 +10,13 @@ import java.time.LocalTime;
 @Entity
 @Table(name = "TB_MESSAGE")
 public class Message {
-    private static final int MSG_TYPE_USER = 0;
-    private static final int MSG_TYPE_GROUP = 1;
+    public static final int MSG_TYPE_USER = 0;
+    public static final int MSG_TYPE_GROUP = 1;
+
+    public static final int TYPE_STR = 1; // 字符串类型
+    public static final int TYPE_PIC = 2; // 图片类型
+    public static final int TYPE_FILE = 3; // 文件类型
+    public static final int TYPE_AUDIO = 4; // 语音类型
 
 
     @Id
@@ -22,29 +27,17 @@ public class Message {
     @Column(updatable = false,nullable = false)
     private String id;
 
-    @Column(updatable = false,nullable = false)
-    private int messageType;
+    @Column(updatable = false)
+    private String attach ;
 
-    @Column(updatable = false,nullable = false)
+
+//    类型为text  TEXT是一个大字段类型
+    @Column(updatable = false,nullable = false,columnDefinition = "TEXT")
     private String content;
 
-    @Column(updatable = false)
-    private String attch ;
-
-
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "senderId")
-    private User sender;
-    @Column()
-    private String senderId;
-
-
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "receiverId")
-    private User receiver;
-    @Column()
-    private String receiverId;
-
+    @CreationTimestamp
+    @Column(nullable = false,updatable = false)
+    private LocalTime  createAt = LocalTime.now();
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "receiverGroupId")
@@ -52,14 +45,119 @@ public class Message {
     @Column()
     private String receiverGroupId;
 
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "receiverId")
+    private User receiver;
+    @Column()
+    private String receiverId;
 
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "senderId")
+    private User sender;
+    @Column()
+    private String senderId;
 
-    @CreationTimestamp
-    @Column(nullable = false,updatable = false)
-    private LocalTime  createAt = LocalTime.now();
+    @Column(updatable = false,nullable = false)
+    private int messageType;
 
     @CreationTimestamp
     @Column()
-    private LocalTime  receiveAt;
+    private LocalTime  updateAt;
 
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getAttach() {
+        return attach;
+    }
+
+    public void setAttach(String attach) {
+        this.attach = attach;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public LocalTime getCreateAt() {
+        return createAt;
+    }
+
+    public void setCreateAt(LocalTime createAt) {
+        this.createAt = createAt;
+    }
+
+    public Group getReceiverGroup() {
+        return receiverGroup;
+    }
+
+    public void setReceiverGroup(Group receiverGroup) {
+        this.receiverGroup = receiverGroup;
+    }
+
+    public String getReceiverGroupId() {
+        return receiverGroupId;
+    }
+
+    public void setReceiverGroupId(String receiverGroupId) {
+        this.receiverGroupId = receiverGroupId;
+    }
+
+    public User getReceiver() {
+        return receiver;
+    }
+
+    public void setReceiver(User receiver) {
+        this.receiver = receiver;
+    }
+
+    public String getReceiverId() {
+        return receiverId;
+    }
+
+    public void setReceiverId(String receiverId) {
+        this.receiverId = receiverId;
+    }
+
+    public User getSender() {
+        return sender;
+    }
+
+    public void setSender(User sender) {
+        this.sender = sender;
+    }
+
+    public String getSenderId() {
+        return senderId;
+    }
+
+    public void setSenderId(String senderId) {
+        this.senderId = senderId;
+    }
+
+    public int getMessageType() {
+        return messageType;
+    }
+
+    public void setMessageType(int messageType) {
+        this.messageType = messageType;
+    }
+
+    public LocalTime getUpdateAt() {
+        return updateAt;
+    }
+
+    public void setUpdateAt(LocalTime updateAt) {
+        this.updateAt = updateAt;
+    }
 }
