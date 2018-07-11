@@ -7,7 +7,8 @@ import javax.persistence.*;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.time.LocalTime;
+
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -24,13 +25,13 @@ public class Group {
     @Column()
     private String description;
 
-    @Column(updatable = false,nullable = false)
+    @Column(nullable = false)
     private String pic;
 
     @ManyToOne( optional = false)
     @JoinColumn(name = "ownerId")
     private User  owner;
-    @Column(updatable = false,nullable = false)
+    @Column(insertable=false, updatable = false)
     private String ownerId;
 
     @LazyCollection(LazyCollectionOption.EXTRA)
@@ -39,7 +40,7 @@ public class Group {
 
     @CreationTimestamp
     @Column(nullable = false,updatable = false,insertable = false)
-    private LocalTime createAr = LocalTime.now();
+    private LocalDateTime createAr = LocalDateTime.now();
 
 
 

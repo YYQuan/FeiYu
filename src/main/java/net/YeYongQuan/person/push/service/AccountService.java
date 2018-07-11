@@ -1,6 +1,10 @@
 package net.YeYongQuan.person.push.service;
 
 
+import net.YeYongQuan.person.push.bean.api.ModelCard.UserCard;
+import net.YeYongQuan.person.push.bean.api.restful_model.account.RegisterModel;
+import net.YeYongQuan.person.push.bean.db.User;
+import net.YeYongQuan.person.push.factory.account.UserFactory;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -34,12 +38,22 @@ public class AccountService {
         }catch(HibernateException e){
             e.printStackTrace();
         }
-
-
-
         return  19;
     }
 
+
+    @POST
+    @Path("/register")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public UserCard register(RegisterModel model){
+        if(!RegisterModel.check(model)){
+            return  null;
+        }
+
+        UserCard card = UserFactory.register(model);
+        return card;
+    }
 
 
 }

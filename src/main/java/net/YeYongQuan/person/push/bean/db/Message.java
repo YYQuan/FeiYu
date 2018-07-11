@@ -5,7 +5,8 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
+
 
 @Entity
 @Table(name = "TB_MESSAGE")
@@ -35,31 +36,31 @@ public class Message {
     @ManyToOne(optional = false)
     @JoinColumn(name = "senderId")
     private User sender;
-    @Column()
+    @Column(insertable=false, updatable = false)
     private String senderId;
 
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "receiverId")
     private User receiver;
-    @Column()
+    @Column(insertable=false, updatable = false)
     private String receiverId;
 
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "receiverGroupId")
     private Group receiverGroup;
-    @Column()
+    @Column(insertable=false, updatable = false)
     private String receiverGroupId;
 
 
 
     @CreationTimestamp
     @Column(nullable = false,updatable = false)
-    private LocalTime  createAt = LocalTime.now();
+    private LocalDateTime createAt = LocalDateTime.now();
 
     @CreationTimestamp
     @Column()
-    private LocalTime  receiveAt;
+    private LocalDateTime  receiveAt;
 
 }

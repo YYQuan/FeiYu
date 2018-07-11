@@ -6,8 +6,8 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.LazyCollection;
 
 import javax.persistence.*;
-import java.time.LocalTime;
-import java.util.Locale;
+import java.time.LocalDateTime;
+
 
 @Entity
 @Table(name = "TB_PUSH_HISTORY")
@@ -34,9 +34,9 @@ public class PushHistory {
 
     @CreationTimestamp
     @Column(nullable =  false ,insertable = false,updatable = false)
-    private LocalTime createAt =  LocalTime.now();
+    private LocalDateTime createAt =  LocalDateTime.now();
 
     @CreationTimestamp
     @Column
-    private LocalTime receiveAt ;
+    private LocalDateTime receiveAt ;
 }

@@ -12,7 +12,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.*;
-import java.time.LocalTime;
+
 
 @Entity
 @Table(name = "TB_USER")
@@ -37,7 +37,7 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false,unique =true)
+    @Column(unique =true)
     private String token;
 
     @Column
@@ -53,15 +53,15 @@ public class User {
 
     @CreationTimestamp
     @Column(updatable = false,nullable = false)
-    private LocalTime createTime = LocalTime.now();
+    private LocalDateTime createTime = LocalDateTime.now();
 
     @CreationTimestamp
     @Column(nullable = false)
-    private LocalTime updateTime= LocalTime.now();
+    private LocalDateTime updateTime= LocalDateTime.now();
 
     @CreationTimestamp
     @Column
-    private LocalTime lastReceiveTime;
+    private LocalDateTime lastReceiveTime;
 
     @JoinColumn(name = "originUserId")
     @LazyCollection(LazyCollectionOption.EXTRA)
@@ -151,27 +151,27 @@ public class User {
         this.sex = sex;
     }
 
-    public LocalTime getCreateTime() {
+    public LocalDateTime getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(LocalTime createTime) {
+    public void setCreateTime(LocalDateTime createTime) {
         this.createTime = createTime;
     }
 
-    public LocalTime getUpdateTime() {
+    public LocalDateTime getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(LocalTime updateTime) {
+    public void setUpdateTime(LocalDateTime updateTime) {
         this.updateTime = updateTime;
     }
 
-    public LocalTime getLastReceiveTime() {
+    public LocalDateTime getLastReceiveTime() {
         return lastReceiveTime;
     }
 
-    public void setLastReceiveTime(LocalTime lastReceiveTime) {
+    public void setLastReceiveTime(LocalDateTime lastReceiveTime) {
         this.lastReceiveTime = lastReceiveTime;
     }
 

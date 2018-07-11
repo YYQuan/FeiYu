@@ -1,10 +1,12 @@
 package net.YeYongQuan.person.push.bean.db;
 
 
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
+
 
 @Entity
 @Table(name = "TB_GROUP_MEMBER")
@@ -26,5 +28,7 @@ public class GroupMember {
     @Column(nullable = false ,updatable = false,insertable = false)
     private String targetId;
 
-    private LocalTime createAt = LocalTime.now();
+    @CreationTimestamp
+    @Column(nullable = false,updatable = false,insertable = false)
+    private LocalDateTime createAt = LocalDateTime.now();
 }

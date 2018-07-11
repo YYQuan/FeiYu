@@ -4,7 +4,8 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
+
 
 @Entity
 @Table(name = "TB_USER_FOLLOW")
@@ -21,11 +22,11 @@ public class UserFollow {
 
     @CreationTimestamp
     @Column(nullable = false)
-    private LocalTime createAt =LocalTime.now();
+    private LocalDateTime createAt =LocalDateTime.now();
 
     @CreationTimestamp
     @Column(nullable = false)
-    private LocalTime updateAt =LocalTime.now();
+    private LocalDateTime updateAt =LocalDateTime.now();
 
 
 

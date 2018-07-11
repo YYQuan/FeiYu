@@ -5,6 +5,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 @Entity
@@ -35,5 +36,5 @@ public class Apply {
 
     @CreationTimestamp
     @Column(updatable = false,nullable = false)
-    private LocalTime createAt =  LocalTime.now();
+    private LocalDateTime createAt =  LocalDateTime.now();
 }
