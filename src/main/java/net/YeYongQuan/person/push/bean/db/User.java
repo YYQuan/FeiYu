@@ -16,7 +16,7 @@ import java.time.LocalTime;
 
 @Entity
 @Table(name = "TB_USER")
-public class User {
+public class User implements  Principal{
     @Id
     @PrimaryKeyJoinColumn
     @GeneratedValue(generator = "uuid")
@@ -54,7 +54,7 @@ public class User {
     @Column
     private String pushId;
 
-    @Column(nullable = false,unique =true)
+    @Column(unique =true)
     private String token;
 
     @Column(nullable = false)

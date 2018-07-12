@@ -20,8 +20,7 @@ public class UserCard {
     private String id;
     @Expose
     private String name;
-    @Expose
-    private String phoneNum;
+
     @Expose
     private String desc;
     @Expose
@@ -44,6 +43,22 @@ public class UserCard {
     @Expose
     private LocalDateTime modifyAt;
 
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public LocalDateTime getModifyAt() {
+        return modifyAt;
+    }
+
+    public void setModifyAt(LocalDateTime modifyAt) {
+        this.modifyAt = modifyAt;
+    }
+
     public  UserCard(User user){
         this(user ,false);
     }
@@ -53,7 +68,6 @@ public class UserCard {
 
         this.id = user.getId();
         this.name = user.getName();
-        this.phoneNum = user.getPhoneNum();
         this.portrait = user.getPortrait();
         this.desc = user.getDescription();
         this.sex = user.getSex();
@@ -62,9 +76,7 @@ public class UserCard {
         //TODO  关注人以及粉丝的数目
     }
 
-    public static UserCard  build(User user){
-        return   new UserCard(user);
-    }
+
 
     public String getId() {
         return id;

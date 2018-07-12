@@ -7,31 +7,30 @@ import net.YeYongQuan.person.push.bean.db.User;
 
 //AccountRspModel存在的意义 ： 返回一些userCard中没有的较为私密的信息
 //但又不至于让user暴露
-public class AccountRspModel {
+public class LoginRspModel {
+
     @Expose
     private UserCard userCard;
     @Expose
     private String account;
     @Expose
     private String token;
-    @Expose
-    private boolean isBind;
 
-    public AccountRspModel(User user) {
-        this( new UserCard(user),user.getPhoneNum(),user.getToken(),false);
-    }
-    public AccountRspModel(User user,boolean isBind) {
-        this( new UserCard(user),user.getPhoneNum(),user.getToken(),isBind);
+    public LoginRspModel(User user) {
+        this( new UserCard(user),user.getPhoneNum(),user.getToken());
     }
 
-    public AccountRspModel(UserCard userCard, String account, String token, boolean isBind) {
+    public LoginRspModel(User user, boolean isBind) {
+        this( new UserCard(user),user.getPhoneNum(),user.getToken());
+    }
+
+    public LoginRspModel(UserCard userCard, String account, String token) {
 
         this.userCard = userCard;
         this.account = account;
         this.token = token;
-        this.isBind = isBind;
-    }
 
+    }
 
     public UserCard getUserCard() {
         return userCard;
@@ -55,14 +54,6 @@ public class AccountRspModel {
 
     public void setToken(String token) {
         this.token = token;
-    }
-
-    public boolean isBind() {
-        return isBind;
-    }
-
-    public void setBind(boolean bind) {
-        isBind = bind;
     }
 
 }

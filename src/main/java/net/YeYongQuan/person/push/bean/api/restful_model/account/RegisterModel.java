@@ -11,6 +11,8 @@ public class RegisterModel {
     private String password;
     @Expose
     private String name;
+    @Expose
+    private String pushId;
 
     public String getAccount() {
         return account;
@@ -36,7 +38,17 @@ public class RegisterModel {
         this.name = name;
     }
 
+    public String getPushId() {
+        return pushId;
+    }
+
+    public void setPushId(String pushId) {
+        this.pushId = pushId;
+    }
+
     public static  boolean check(RegisterModel model){
+        model.setAccount(model.getAccount().trim());
+        model.setName(model.getName().trim());
         return   model!=null
                 && !Strings.isNullOrEmpty(model.getAccount())
                 && !Strings.isNullOrEmpty(model.getPassword())

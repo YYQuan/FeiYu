@@ -65,12 +65,12 @@ public class Hib {
     }
 
 
-//    接收Hib的事务的接口 无返回值
+//    接收Hib的事务的接口
     public interface QueryOnly{
         void query(Session session);
     }
 
-    //    接收Hib的事务的接口  有返回值
+    //    接收Hib的事务的接口
     public interface Query<T>{
         T query(Session session);
     }

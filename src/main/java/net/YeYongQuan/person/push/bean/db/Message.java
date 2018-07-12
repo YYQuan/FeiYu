@@ -43,7 +43,7 @@ public class Message {
     @ManyToOne(optional = false)
     @JoinColumn(name = "receiverGroupId")
     private Group receiverGroup;
-    @Column()
+    @Column(insertable=false, updatable=false)
     private String receiverGroupId;
 
     @ManyToOne(optional = false)
@@ -55,7 +55,7 @@ public class Message {
     @ManyToOne(optional = false)
     @JoinColumn(name = "senderId")
     private User sender;
-    @Column()
+    @Column(insertable=false, updatable = false)
     private String senderId;
 
     @Column(updatable = false,nullable = false)

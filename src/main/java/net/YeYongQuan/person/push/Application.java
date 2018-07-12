@@ -2,6 +2,7 @@ package net.YeYongQuan.person.push;
 
 
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
+import net.YeYongQuan.person.push.provider.AuthRequestFilter;
 import net.YeYongQuan.person.push.provider.GsonProvider;
 import net.YeYongQuan.person.push.service.AccountService;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -16,6 +17,9 @@ public class Application extends ResourceConfig {
         //注册处理类的包名
         packages(AccountService.class.getPackage().getName());
 
+
+//        注册过滤器
+        register(AuthRequestFilter.class);
         // 注册Json解析器
         //register(JacksonJsonProvider.class);
         register(GsonProvider.class);

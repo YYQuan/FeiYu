@@ -23,7 +23,7 @@ public class Apply {
     @ManyToOne(optional = false)
     @JoinColumn(name = "applicaterId")
     private User applicater;
-    @Column(updatable = false) //申请人可以为null ，  系统消息
+    @Column(insertable = false,updatable = false) //申请人可以为null ，  系统消息
     private String applicaterId;
 
     @Column()
@@ -43,9 +43,7 @@ public class Apply {
     @Column(updatable = false,nullable = false)
     private int type;
 
-    @CreationTimestamp
-    @Column(updatable = false,nullable = false)
-    private LocalDateTime createAt =  LocalDateTime.now();
+
     @Column(updatable = false)
     private LocalTime updateAt =  LocalTime.now();
 
