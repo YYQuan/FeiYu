@@ -19,14 +19,12 @@ public class UserFollow {
     @Column(nullable = false,updatable = false)
     private String id;
 
+    @Column
+    private String alias;
 
     @CreationTimestamp
     @Column(nullable = false)
     private LocalDateTime createAt =LocalDateTime.now();
-
-    @CreationTimestamp
-    @Column(nullable = false)
-    private LocalDateTime updateAt =LocalDateTime.now();
 
 
 
@@ -43,9 +41,10 @@ public class UserFollow {
     @Column(nullable = false,insertable = false,updatable = false)
     private String targetUserId;
 
-    @Column
-    private String alias;
 
+    @CreationTimestamp
+    @Column(nullable = false)
+    private LocalDateTime updateAt =LocalDateTime.now();
 
     public String getId() {
         return id;
@@ -53,5 +52,61 @@ public class UserFollow {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getAlias() {
+        return alias;
+    }
+
+    public void setAlias(String alias) {
+        this.alias = alias;
+    }
+
+    public LocalDateTime getCreateAt() {
+        return createAt;
+    }
+
+    public void setCreateAt(LocalDateTime createAt) {
+        this.createAt = createAt;
+    }
+
+    public User getOriginUser() {
+        return originUser;
+    }
+
+    public void setOriginUser(User originUser) {
+        this.originUser = originUser;
+    }
+
+    public String getOriginUserId() {
+        return originUserId;
+    }
+
+    public void setOriginUserId(String originUserId) {
+        this.originUserId = originUserId;
+    }
+
+    public User getTargetUser() {
+        return targetUser;
+    }
+
+    public void setTargetUser(User targetUser) {
+        this.targetUser = targetUser;
+    }
+
+    public String getTargetUserId() {
+        return targetUserId;
+    }
+
+    public void setTargetUserId(String targetUserId) {
+        this.targetUserId = targetUserId;
+    }
+
+    public LocalDateTime getUpdateAt() {
+        return updateAt;
+    }
+
+    public void setUpdateAt(LocalDateTime updateAt) {
+        this.updateAt = updateAt;
     }
 }

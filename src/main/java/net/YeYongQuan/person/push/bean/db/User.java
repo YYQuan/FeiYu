@@ -12,7 +12,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.*;
-
+import java.time.LocalTime;
 
 @Entity
 @Table(name = "TB_USER")
@@ -24,44 +24,49 @@ public class User {
     @Column(updatable = false,nullable = false)
     private String id;
 
+    @CreationTimestamp
+    @Column(updatable = false,nullable = false)
+    private LocalDateTime createTime = LocalDateTime.now();
+
+    @Column
+    private String description;
+
+    @CreationTimestamp
+    @Column
+    private LocalDateTime lastReceiveTime;
+
 
     @Column(nullable = false, length = 128, unique = true)
     private String name;
+
+
+    @Column(nullable = false)
+    private String password;
 
     @Column(nullable = false, length = 64, unique = true)
     private String phoneNum;
 
     @Column
-    private String description;
+    private String  portrait;
 
-    @Column(nullable = false)
-    private String password;
 
-    @Column(unique =true)
-    private String token;
 
     @Column
     private String pushId;
 
-    @Column
-    private String  portrait;
+    @Column(nullable = false,unique =true)
+    private String token;
 
-    @Column
-    private int sex;
+    @Column(nullable = false)
+    private int sex = 0;
 
 
-
-    @CreationTimestamp
-    @Column(updatable = false,nullable = false)
-    private LocalDateTime createTime = LocalDateTime.now();
 
     @CreationTimestamp
     @Column(nullable = false)
     private LocalDateTime updateTime= LocalDateTime.now();
 
-    @CreationTimestamp
-    @Column
-    private LocalDateTime lastReceiveTime;
+
 
     @JoinColumn(name = "originUserId")
     @LazyCollection(LazyCollectionOption.EXTRA)
