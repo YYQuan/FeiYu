@@ -127,8 +127,13 @@ public class UserFactory {
     }
 
     public static List<User> search(String content){
+        if(Strings.isNullOrEmpty(content)){
+            content = "";
+        }
+        String name = "%"+content+"%";
        return Hib.query(session -> {
             return session.createQuery("from  User  where lower(name) like :content and description  is not null and portrait is not null ")
+                    .setParameter("content",name)
                     .setMaxResults(20)
                     .getResultList();
         });
@@ -144,17 +149,15 @@ public class UserFactory {
             session.load(origin,origin.getId());
             session.load(target,target.getId());
 
-
             UserFollow  followOrigin  = new UserFollow();
-            followOrigin.setOriginUserId(origin.getId());
-            followOrigin.setTargetUserId(target.getId());
+//            注意，这里set的是User 而不是userID
+            followOrigin.setOriginUser(origin);
+            followOrigin.setTargetUser(target);
             followOrigin.setAlias(alias);
 
-
-
             UserFollow  followTarget  = new UserFollow();
-            followTarget.setOriginUserId(target.getId());
-            followTarget.setTargetUserId(origin.getId());
+            followTarget.setOriginUser(target);
+            followTarget.setTargetUser(origin);
 
             session.save(followOrigin);
             session.save(followTarget);
@@ -163,6 +166,7 @@ public class UserFactory {
         });
 
     }
+
 
     public static UserFollow getUserFollow(User origin ,User target ){
         return Hib.query(session ->
