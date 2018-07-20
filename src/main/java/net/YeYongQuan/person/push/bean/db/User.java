@@ -180,5 +180,27 @@ public class User implements  Principal{
         this.lastReceiveTime = lastReceiveTime;
     }
 
+    public Set<UserFollow> getFollowing() {
+        return following;
+    }
 
+    public Set<UserFollow> getFollowers() {
+        return followers;
+    }
+
+    public Set<Group> getOwners() {
+        return owners;
+    }
+
+    public void setFollowing(Set<UserFollow> following) {
+        this.following = following;
+    }
+
+    public void setFollowers(Set<UserFollow> followers) {
+        this.followers = followers;
+    }
+
+    public void setOwners(Set<Group> owners) {
+        this.owners = owners;
+    }
 }

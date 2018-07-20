@@ -6,12 +6,16 @@ import net.YeYongQuan.person.push.bean.api.restful_model.account.LoginModel;
 import net.YeYongQuan.person.push.bean.api.restful_model.account.RegisterModel;
 import net.YeYongQuan.person.push.bean.api.restful_model.user.UserInfoModel;
 import net.YeYongQuan.person.push.bean.db.User;
+import net.YeYongQuan.person.push.bean.db.UserFollow;
 import net.YeYongQuan.person.push.utils.Hib;
 import net.YeYongQuan.person.push.utils.TextUtil;
 import org.hibernate.Session;
 
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class UserFactory {
     public static User findUserByToken(String tokenStr ){
@@ -37,6 +41,12 @@ public class UserFactory {
                     .uniqueResult());
     }
 
+    public static User findUserById(String id){
+        return  Hib.query(session ->
+                (User) session.get(User.class,id)
+        );
+    }
+
     public static User login(LoginModel model){
         model.setAccount(model.getAccount().trim());
 //        把密码转换为MD5 base 64的暗码
@@ -56,8 +66,6 @@ public class UserFactory {
         });
 
     }
-
-
 
     public static User register(RegisterModel model){
         User  user = new User();
@@ -104,6 +112,69 @@ public class UserFactory {
         return user;
     }
 
+    public static List<User> getContact(final User  user){
+        return Hib.query(session -> {
+//            操作懒加载前要 load一下
+            session.load(user,user.getId());
+
+            Set<UserFollow> userSet =user.getFollowing();
+
+            return   userSet.stream()
+                            .map(UserFollow::getTargetUser)
+                            .collect(Collectors.toList());
+
+        });
+    }
+
+    public static List<User> search(String content){
+       return Hib.query(session -> {
+            return session.createQuery("from  User  where lower(name) like :content and description  is not null and portrait is not null ")
+                    .setMaxResults(20)
+                    .getResultList();
+        });
+    }
+
+    public static User  follow(User origin ,User target,String alias){
+        UserFollow follow  =getUserFollow(origin ,target);
+        if(follow!=null){
+            return follow.getTargetUser();
+        }
+        return Hib.query(session -> {
+            //操作懒加载的数据需要重新load一次
+            session.load(origin,origin.getId());
+            session.load(target,target.getId());
+
+
+            UserFollow  followOrigin  = new UserFollow();
+            followOrigin.setOriginUserId(origin.getId());
+            followOrigin.setTargetUserId(target.getId());
+            followOrigin.setAlias(alias);
+
+
+
+            UserFollow  followTarget  = new UserFollow();
+            followTarget.setOriginUserId(target.getId());
+            followTarget.setTargetUserId(origin.getId());
+
+            session.save(followOrigin);
+            session.save(followTarget);
+
+            return target;
+        });
+
+    }
+
+    public static UserFollow getUserFollow(User origin ,User target ){
+        return Hib.query(session ->
+            (UserFollow)session.createQuery("from  UserFollow  where originUserId=:origin and targetUserId = :target")
+                    .setParameter("origin",origin.getId())
+                    .setParameter("target",target.getId())
+                    .setMaxResults(1)
+                    .uniqueResult()
+        );
+    }
+
+
     public static User  saveOrUpdate(final User user){
         return Hib.query(session -> {
             session.saveOrUpdate(user);
@@ -111,13 +182,10 @@ public class UserFactory {
         });
     }
 
-
 //    明码转暗码
     public static String  passWordConvert(String str){
         return TextUtil.encodeBase64(TextUtil.getMD5(str.trim()));
     }
-
-
 
     public static User updateUserInfo(User user ,UserInfoModel model) {
         if(checkUpdate(user,model)){
@@ -125,7 +193,6 @@ public class UserFactory {
         }
         return user;
     }
-
 
 //    判断是否需要update，并且把需要updaet的内容set到 参数User当中
     private static boolean checkUpdate(User user  ,UserInfoModel model){

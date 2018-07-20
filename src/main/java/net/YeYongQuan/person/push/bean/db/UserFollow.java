@@ -109,4 +109,5 @@ public class UserFollow {
     public void setUpdateAt(LocalDateTime updateAt) {
         this.updateAt = updateAt;
     }
+
 }

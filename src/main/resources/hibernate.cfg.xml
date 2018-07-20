@@ -9,6 +9,7 @@
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <!--链接地址用户名密码 -->
         <property name="connection.url">jdbc:mysql://127.0.0.1:3306/db_fei_yu?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false</property>
+
         <property name="connection.username">root</property>
         <property name="connection.password">123456</property>
 
@@ -48,13 +49,13 @@
 
         <!-- 自动更新数据库的级别 -->
         <property name="hbm2ddl.auto">update</property>
+
         <!--
         create：表示启动的时候先drop，再create
         create-drop: 也表示创建，只不过再系统关闭前执行一下drop
         update: 这个操作启动的时候会去检查schema是否一致，如果不一致会做scheme更新
         validate: 启动时验证现有schema与你配置的hibernate是否一致，如果不一致就抛出异常，并不做更新
         -->
-
 
         <mapping package="net.YeYongQuan.person.push.bean.db"
                  class="net.YeYongQuan.person.push.bean.db.User"/>
@@ -70,18 +71,6 @@
                  class="net.YeYongQuan.person.push.bean.db.PushHistory"/>
         <mapping package="net.YeYongQuan.person.push.bean.db"
                  class="net.YeYongQuan.person.push.bean.db.Apply"/>
-        <!--<mapping package="net.qiujuer.web.italker.push.bean.db"-->
-        <!--class="net.qiujuer.web.italker.push.bean.db.Group"/>-->
-        <!--<mapping package="net.qiujuer.web.italker.push.bean.db"-->
-        <!--class="net.qiujuer.web.italker.push.bean.db.GroupMember"/>-->
-        <!--<mapping package="net.qiujuer.web.italker.push.bean.db"-->
-        <!--class="net.qiujuer.web.italker.push.bean.db.UserFollow"/>-->
-        <!--<mapping package="net.qiujuer.web.italker.push.bean.db"-->
-        <!--class="net.qiujuer.web.italker.push.bean.db.Message"/>-->
-        <!--<mapping package="net.qiujuer.web.italker.push.bean.db"-->
-        <!--class="net.qiujuer.web.italker.push.bean.db.PushHistory"/>-->
-        <!--<mapping package="net.qiujuer.web.italker.push.bean.db"-->
-        <!--class="net.qiujuer.web.italker.push.bean.db.Apply"/>-->
 
     </session-factory>
 </hibernate-configuration>
