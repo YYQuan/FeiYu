@@ -27,7 +27,7 @@ public class AccountService extends BaseService{
     @Path("/login")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public ResponseModel<LoginRspModel> login(LoginModel model){
+    public ResponseModel<AccountRspModel> login(LoginModel model){
         if(!LoginModel.check(model)){
             return ResponseModel.buildParameterError();
         }
@@ -36,7 +36,7 @@ public class AccountService extends BaseService{
             if(!Strings.isNullOrEmpty(model.getPushId())){
                 user = UserFactory.updatePushId(user,model.getPushId());
             }
-            LoginRspModel  rspModel = new LoginRspModel(user);
+            AccountRspModel  rspModel = new AccountRspModel(user);
             return  ResponseModel.buildOk(rspModel);
         }else{
             return  ResponseModel.buildLoginError();
@@ -95,13 +95,14 @@ public class AccountService extends BaseService{
     @Path("/bindPushId/{pushId}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public ResponseModel bindPushId(@HeaderParam("token") String token,
+    public ResponseModel<AccountRspModel> bindPushId(@HeaderParam("token") String token,
                            @PathParam("pushId") String pushID){
 
         User user = UserFactory.findUserByToken(token);
         user = UserFactory.updatePushId(user,pushID);
         if(user!=null){
-            return  ResponseModel.buildOk();
+            AccountRspModel rspModel = new AccountRspModel(user,true);
+            return  ResponseModel.buildOk(rspModel);
         }else{
             return ResponseModel.buildAccountError();
         }
