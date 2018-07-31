@@ -10,8 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1db6a775-3ab3-4ea2-b3ce-43911f3a2cea" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/ModelCard/ApplyCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/ModelCard/GroupCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/ModelCard/GroupMemberCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/ModelCard/MessageCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/base/PushModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -52,29 +57,26 @@
       <file leaf-file-name="hibernate.cfg.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1404">
-              <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+            <state relative-caret-position="135">
+              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/UserService.java">
+      <file leaf-file-name="Group.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Group.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2268">
-              <caret line="95" column="45" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="297">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="21" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AccountService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/AccountService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+            <state relative-caret-position="864">
+              <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#register#0;class#AccountService#0" />
@@ -84,109 +86,75 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginRspModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/account/LoginRspModel.java">
+      <file leaf-file-name="RegisterModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/account/RegisterModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="108">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
-                <element signature="e#476#477#0" expanded="true" />
-                <element signature="e#552#553#0" expanded="true" />
+                <element signature="e#857#858#0" expanded="true" />
+                <element signature="e#886#887#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountRspModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/account/AccountRspModel.java">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-              <folding>
-                <element signature="e#519#520#0" expanded="true" />
-                <element signature="e#601#602#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="351">
+              <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/account/LoginModel.java">
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="358">
+              <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/account/UserFactory.java">
+      <file leaf-file-name="PushModel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/base/PushModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1944">
-              <caret line="135" column="48" selection-start-line="135" selection-start-column="48" selection-end-line="135" selection-end-column="48" />
+            <state relative-caret-position="459">
+              <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#findUserByName#0;class#UserFactory#0" />
-                <element signature="method#login#0;class#UserFactory#0" />
-                <element signature="method#register#0;class#UserFactory#0" />
-                <element signature="method#createToken#0;class#UserFactory#0" />
-                <element signature="method#updatePushId#0;class#UserFactory#0" />
-                <element signature="method#updateUserInfo#0;class#UserFactory#0" />
-                <element signature="method#checkUpdate#0;class#UserFactory#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserCard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/ModelCard/UserCard.java">
+      <file leaf-file-name="TextUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/utils/TextUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1134">
-              <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+            <state relative-caret-position="-386">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageCard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/ModelCard/MessageCard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1026">
+              <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1122#1123#0" expanded="true" />
-                <element signature="e#1154#1155#0" expanded="true" />
-                <element signature="e#1282#1283#0" expanded="true" />
-                <element signature="e#1322#1323#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserFollow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/UserFollow.java">
+      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-              <folding>
-                <element signature="e#1889#1890#0" expanded="true" />
-                <element signature="e#1937#1938#0" expanded="true" />
-                <element signature="e#2229#2230#0" expanded="true" />
-                <element signature="e#2277#2278#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2105#2106#0" expanded="true" />
-                <element signature="e#2130#2131#0" expanded="true" />
-                <element signature="e#3969#3970#0" expanded="true" />
-                <element signature="e#4001#4002#0" expanded="true" />
-                <element signature="e#4046#4047#0" expanded="true" />
-                <element signature="e#4078#4079#0" expanded="true" />
-                <element signature="e#4115#4116#0" expanded="true" />
-                <element signature="e#4144#4145#0" expanded="true" />
-                <element signature="e#4203#4204#0" expanded="true" />
-                <element signature="e#4245#4246#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="540">
+              <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
             </state>
           </provider>
         </entry>
@@ -610,9 +578,12 @@
         <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/utils/Hib.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/UserFollow.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/account/UserFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/AccountService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/base/PushModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/ModelCard/MessageCard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/base/PushModel.java" />
       </list>
     </option>
   </component>
@@ -646,8 +617,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -655,10 +624,150 @@
               <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
               <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
+            <path>
+              <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="push" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="push" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="push" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="push" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="ModelCard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="push" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="restful_model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="push" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="restful_model" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="push" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="push" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeiYu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeiYu" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -837,7 +946,16 @@
       <workItem from="1532050665854" duration="16731000" />
       <workItem from="1532399356647" duration="1553000" />
       <workItem from="1532404375636" duration="3484000" />
-      <workItem from="1532422144032" duration="230000" />
+      <workItem from="1532422144032" duration="425000" />
+      <workItem from="1532431926288" duration="1195000" />
+      <workItem from="1532497077663" duration="2008000" />
+      <workItem from="1532515722599" duration="1367000" />
+      <workItem from="1532585985036" duration="79000" />
+      <workItem from="1532586231054" duration="1587000" />
+      <workItem from="1532588328057" duration="677000" />
+      <workItem from="1532665019843" duration="1884000" />
+      <workItem from="1532923590445" duration="1596000" />
+      <workItem from="1533002317746" duration="325000" />
     </task>
     <task id="LOCAL-00001" summary="配置好   hibernate  &amp;    jersey">
       <created>1530181636371</created>
@@ -902,11 +1020,18 @@
       <option name="project" value="LOCAL" />
       <updated>1532070870912</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="修复  bind PushID的restful 接口的错误">
+      <created>1532422476670</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1532422476670</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85861000" />
+    <option name="totallyTimeSpent" value="96774000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -928,12 +1053,12 @@
       <window_info anchor="bottom" id="Application Servers" order="8" sideWeight="0.4989339" weight="0.3281075" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32922733" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4989339" weight="0.38521835" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32922733" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32922733" />
       <window_info id="Persistence" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" x="2086" y="205" width="480" height="630" id="Project" order="0" visible="true" weight="0.19083156" />
+      <window_info active="true" content_ui="combo" x="2086" y="205" width="480" height="630" id="Project" order="0" visible="true" weight="0.20362474" />
       <window_info anchor="right" id="Bean Validation" order="0" />
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="right" id="Database" order="8" visible="true" weight="0.28731343" />
@@ -941,14 +1066,14 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39977604" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32922733" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.32922733" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32922733" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Build" order="0" sideWeight="0.4989339" weight="0.32885906" />
@@ -1038,7 +1163,8 @@
     <MESSAGE value="实现 服务器 更新用户信息的接口" />
     <MESSAGE value="实现 服务器  拉取联系人列表" />
     <MESSAGE value="实现 服务器  关注、读取user信息、搜索  接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现 服务器  关注、读取user信息、搜索  接口" />
+    <MESSAGE value="修复  bind PushID的restful 接口的错误" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复  bind PushID的restful 接口的错误" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1050,22 +1176,10 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/UserService.java</url>
-          <line>36</line>
-          <properties />
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/account/UserFactory.java</url>
           <line>148</line>
           <properties />
           <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/UserService.java</url>
-          <line>95</line>
-          <properties />
-          <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/AccountService.java</url>
@@ -1074,13 +1188,19 @@
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/AccountService.java</url>
-          <line>100</line>
+          <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/UserService.java</url>
+          <line>57</line>
           <properties />
-          <option name="timeStamp" value="47" />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/UserService.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="48" />
+      <option name="time" value="52" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1098,24 +1218,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fc050006-8dfc-4155-9912-f64f5fc9e1e5/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore" />
     <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml" />
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1160,24 +1262,10 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="das://c060e9f3-b053-42cd-9209-5142b70a172c/schema/db_im_fei_yu/table/tb_user" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/2.8.4/b86c8a3f85be0a399fd22ab3e742bcfb5e4df5e0/jackson-jaxrs-json-provider-2.8.4-sources.jar!/com/fasterxml/jackson/jaxrs/json/JacksonJsonProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
           <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -1195,13 +1283,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/utils/TextUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/time/LocalTime.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -1213,13 +1294,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Group.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="40" selection-start-line="40" selection-end-line="41" selection-end-column="66" />
         </state>
       </provider>
     </entry>
@@ -1237,24 +1311,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1539">
-          <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-server/2.26-b03/bedcfdc4480e0bed601c9d918d8ddcd1e56a4546/jersey-server-2.26-b03-sources.jar!/org/glassfish/jersey/server/model/internal/ResourceMethodInvocationHandlerFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
           <caret line="73" column="87" selection-start-line="73" selection-start-column="87" selection-end-line="73" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/account/RegisterModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
@@ -1269,13 +1329,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/BaseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1344,13 +1397,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1134">
           <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1122#1123#0" expanded="true" />
-            <element signature="e#1154#1155#0" expanded="true" />
-            <element signature="e#1282#1283#0" expanded="true" />
-            <element signature="e#1322#1323#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1358,19 +1404,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2105#2106#0" expanded="true" />
-            <element signature="e#2130#2131#0" expanded="true" />
-            <element signature="e#3969#3970#0" expanded="true" />
-            <element signature="e#4001#4002#0" expanded="true" />
-            <element signature="e#4046#4047#0" expanded="true" />
-            <element signature="e#4078#4079#0" expanded="true" />
-            <element signature="e#4115#4116#0" expanded="true" />
-            <element signature="e#4144#4145#0" expanded="true" />
-            <element signature="e#4203#4204#0" expanded="true" />
-            <element signature="e#4245#4246#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1387,10 +1420,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/account/LoginModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/account/LoginRspModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/account/AccountRspModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.1-m05/2463ebf6800a82b73b2293556a368c783d743902/javax.ws.rs-api-2.1-m05-sources.jar!/javax/ws/rs/core/SecurityContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+          <folding>
+            <element signature="e#308#309#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/account/UserFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="135" column="48" selection-start-line="135" selection-start-column="48" selection-end-line="135" selection-end-column="48" />
+        <state relative-caret-position="2295">
+          <caret line="148" selection-start-line="148" selection-end-line="148" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#findUserByName#0;class#UserFactory#0" />
@@ -1404,60 +1476,103 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1404">
-          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2268">
-          <caret line="95" column="45" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
+        <state relative-caret-position="1674">
+          <caret line="110" column="1" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#contact#0;class#UserService#0" />
+            <element signature="method#follow#0;class#UserService#0" />
+            <element signature="method#search#0;class#UserService#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/account/LoginModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Group.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="297">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="21" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/account/LoginRspModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/account/AccountRspModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-          <folding>
-            <element signature="e#519#520#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/AccountService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+        <state relative-caret-position="864">
+          <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#register#0;class#AccountService#0" />
             <element signature="method#passwordEncryption#0;class#AccountService#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/account/RegisterModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="e#857#858#0" expanded="true" />
+            <element signature="e#886#887#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/base/PushModel.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/ModelCard/MessageCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/utils/TextUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-386">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/base/PushModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
