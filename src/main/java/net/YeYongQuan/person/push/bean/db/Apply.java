@@ -32,7 +32,7 @@ public class Apply {
 
     @CreationTimestamp
     @Column(updatable = false,nullable = false)
-    private LocalTime createAt =  LocalTime.now();
+    private LocalDateTime createAt =  LocalDateTime.now();
 
     @Column(updatable = false,nullable = false)
     private String description;
@@ -80,11 +80,11 @@ public class Apply {
         this.attach = attach;
     }
 
-    public LocalTime getCreateAt() {
+    public LocalDateTime getCreateAt() {
         return createAt;
     }
 
-    public void setCreateAt(LocalTime createAt) {
+    public void setCreateAt(LocalDateTime createAt) {
         this.createAt = createAt;
     }
 

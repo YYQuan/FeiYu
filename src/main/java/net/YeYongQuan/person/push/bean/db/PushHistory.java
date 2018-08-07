@@ -22,34 +22,55 @@ public class PushHistory {
     @Column(updatable = false,nullable = false)
     private String id;
 
-    @CreationTimestamp
-    @Column
-    private LocalDateTime receiveAt ;
-
-    @CreationTimestamp
-    @Column(nullable =  false ,insertable = false,updatable = false)
-    private LocalDateTime createAt =  LocalDateTime.now();
-
-//    BLOB是比TEXT更多的一个大字段类型
+    //    BLOB是比TEXT更多的一个大字段类型
+    @Lob
     @Column( columnDefinition ="BLOB" )
     private String entity;
 
     @Column
     private int entityType;
 
-    @Column(nullable = false)
+
+
+
+    // 接收者
+    // 接收者不允许为空
+    // 一个接收者可以接收很多推送消息
+    // FetchType.EAGER：加载一条推送消息的时候之间加载用户信息
+    @ManyToOne(optional = false, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "receiverId")// 默认是：receiver_id
+    private User receiver;
+    @Column(nullable = false, updatable = false, insertable = false)
     private String receiverId;
+
+
+    // 发送者
+    // 发送者可为空，因为可能是系统消息
+    // 一个发送者可以发送很多推送消息
+    // FetchType.EAGER：加载一条推送消息的时候之间加载用户信息
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "senderId")
+    private User sender;
+    @Column(updatable = false, insertable = false)
+    private String senderId;
 
     @Column
     private String receiverPushId;
 
+
+
     @Column
-    private String  senderId;
+    private LocalDateTime receiveAt ;
+
+    @CreationTimestamp
+    @Column(nullable =  false )
+    private LocalDateTime createAt =  LocalDateTime.now();
+
 
 
     @CreationTimestamp
-    @Column()
-    private LocalDateTime updateAt ;
+    @Column(nullable = false)
+    private LocalDateTime updateAt  = LocalDateTime.now();
 
 
     public static int getPushStatusSending() {
@@ -104,6 +125,14 @@ public class PushHistory {
         return receiverId;
     }
 
+    public User getReceiver() {
+        return receiver;
+    }
+
+    public void setReceiver(User receiver) {
+        this.receiver = receiver;
+    }
+
     public void setReceiverId(String receiverId) {
         this.receiverId = receiverId;
     }
@@ -130,5 +159,13 @@ public class PushHistory {
 
     public void setUpdateAt(LocalDateTime updateAt) {
         this.updateAt = updateAt;
+    }
+
+    public User getSender() {
+        return sender;
+    }
+
+    public void setSender(User sender) {
+        this.sender = sender;
     }
 }

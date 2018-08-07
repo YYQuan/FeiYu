@@ -1,8 +1,8 @@
 package net.YeYongQuan.person.push.bean.api.ModelCard;
 
 import com.google.gson.annotations.Expose;
-import net.qiujuer.web.italker.push.bean.db.Group;
-import net.qiujuer.web.italker.push.bean.db.GroupMember;
+import net.YeYongQuan.person.push.bean.db.Group;
+import net.YeYongQuan.person.push.bean.db.GroupMember;
 
 import java.time.LocalDateTime;
 
@@ -34,7 +34,7 @@ public class GroupCard {
         this.id = group.getId();
         this.name = group.getName();
         this.desc = group.getDescription();
-        this.picture = group.getPicture();
+        this.picture = group.getPic();
         this.ownerId = group.getOwner().getId();
         this.notifyLevel = member.getNotifyLevel();
         this.joinAt = member.getCreateAt();
@@ -45,7 +45,7 @@ public class GroupCard {
         this.id = group.getId();
         this.name = group.getName();
         this.desc = group.getDescription();
-        this.picture = group.getPicture();
+        this.picture = group.getPic();
         this.ownerId = group.getOwner().getId();
         this.notifyLevel = member != null ? member.getNotifyLevel() : 0;
         this.joinAt = member != null ? member.getCreateAt() : null;

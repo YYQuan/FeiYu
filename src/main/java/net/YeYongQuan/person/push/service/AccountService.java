@@ -2,20 +2,13 @@ package net.YeYongQuan.person.push.service;
 
 
 import com.google.common.base.Strings;
-import net.YeYongQuan.person.push.bean.api.ModelCard.UserCard;
 import net.YeYongQuan.person.push.bean.api.restful_model.account.AccountRspModel;
 import net.YeYongQuan.person.push.bean.api.restful_model.account.LoginModel;
-import net.YeYongQuan.person.push.bean.api.restful_model.account.LoginRspModel;
 import net.YeYongQuan.person.push.bean.api.restful_model.account.RegisterModel;
 import net.YeYongQuan.person.push.bean.api.restful_model.base.ResponseModel;
 import net.YeYongQuan.person.push.bean.db.User;
 import net.YeYongQuan.person.push.factory.account.UserFactory;
-import net.YeYongQuan.person.push.utils.Hib;
 import net.YeYongQuan.person.push.utils.TextUtil;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -31,7 +24,9 @@ public class AccountService extends BaseService{
         if(!LoginModel.check(model)){
             return ResponseModel.buildParameterError();
         }
+
         User user =  UserFactory.login(model);
+
         if(user !=null ){
             if(!Strings.isNullOrEmpty(model.getPushId())){
                 user = UserFactory.updatePushId(user,model.getPushId());

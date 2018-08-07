@@ -3,6 +3,7 @@ package net.YeYongQuan.person.push.bean.db;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -11,6 +12,12 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "TB_GROUP_MEMBER")
 public class GroupMember {
+
+    public static final int PERMISSION_TYPE_NONE = 0; // 默认权限，普通成员
+    public static final int PERMISSION_TYPE_ADMIN = 1;  // 管理员
+    public static final int PERMISSION_TYPE_ADMIN_SU = 100; // 创建者
+
+
     @Id
     @PrimaryKeyJoinColumn
     @GeneratedValue(generator = "uuid")
@@ -25,6 +32,11 @@ public class GroupMember {
     @Column(nullable = false)
     private LocalDateTime createAt = LocalDateTime.now();
 
+    // 定义为更新时间戳，在创建时就已经写入
+    @UpdateTimestamp
+    @Column(nullable = false)
+    private LocalDateTime updateAt = LocalDateTime.now();
+
     @JoinColumn(name = "groupId")
     @ManyToOne(optional = false)
     private Group  group;
@@ -37,7 +49,11 @@ public class GroupMember {
     @Column(nullable = false)
     private int permission;
 
-    @Column(nullable = false ,updatable = false,insertable = false)
+    // 成员信息对应的用户信息
+    @JoinColumn(name = "userId")
+    @ManyToOne(optional = false, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private User user;
+    @Column(nullable = false, updatable = false, insertable = false)
     private String userId;
 
     public String getId() {
@@ -62,6 +78,14 @@ public class GroupMember {
 
     public void setCreateAt(LocalDateTime createAt) {
         this.createAt = createAt;
+    }
+
+    public LocalDateTime getUpdateAt() {
+        return updateAt;
+    }
+
+    public void setUpdateAt(LocalDateTime updateAt) {
+        this.updateAt = updateAt;
     }
 
     public Group getGroup() {
@@ -98,6 +122,14 @@ public class GroupMember {
 
     public String getUserId() {
         return userId;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public void setUserId(String userId) {

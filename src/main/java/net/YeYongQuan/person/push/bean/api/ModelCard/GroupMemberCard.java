@@ -1,7 +1,8 @@
 package net.YeYongQuan.person.push.bean.api.ModelCard;
 
 import com.google.gson.annotations.Expose;
-import net.qiujuer.web.italker.push.bean.db.GroupMember;
+import net.YeYongQuan.person.push.bean.db.GroupMember;
+
 
 import java.time.LocalDateTime;
 
@@ -28,8 +29,8 @@ public class GroupMemberCard {
     public GroupMemberCard(GroupMember member) {
         this.id = member.getId();
         this.alias = member.getAlias();
-        this.isAdmin = member.getPermissionType() == GroupMember.PERMISSION_TYPE_ADMIN;
-        this.isOwner = member.getPermissionType() == GroupMember.PERMISSION_TYPE_ADMIN_SU;
+        this.isAdmin = member.getPermission() == GroupMember.PERMISSION_TYPE_ADMIN;
+        this.isOwner = member.getPermission() == GroupMember.PERMISSION_TYPE_ADMIN_SU;
         this.userId = member.getUserId();
         this.groupId = member.getGroupId();
         this.modifyAt = member.getUpdateAt();

@@ -1,7 +1,8 @@
 package net.YeYongQuan.person.push.bean.api.ModelCard;
 
 import com.google.gson.annotations.Expose;
-import net.qiujuer.web.italker.push.bean.db.Apply;
+import net.YeYongQuan.person.push.bean.db.Apply;
+
 
 import java.time.LocalDateTime;
 
@@ -39,7 +40,7 @@ public class ApplyCard {
         this.desc = apply.getDescription();
         this.type = apply.getType();
         this.targetId = apply.getTargetId();
-        this.applicantId = apply.getApplicantId();
+        this.applicantId = apply.getApplicaterId();
         this.createAt = apply.getCreateAt();
     }
 

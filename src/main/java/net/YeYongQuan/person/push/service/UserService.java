@@ -6,7 +6,6 @@ import net.YeYongQuan.person.push.bean.api.restful_model.base.ResponseModel;
 import net.YeYongQuan.person.push.bean.api.restful_model.user.UserInfoModel;
 import net.YeYongQuan.person.push.bean.db.User;
 import net.YeYongQuan.person.push.factory.account.UserFactory;
-import net.YeYongQuan.person.push.utils.TextUtil;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

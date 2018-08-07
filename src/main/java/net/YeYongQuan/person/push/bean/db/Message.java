@@ -1,6 +1,7 @@
 package net.YeYongQuan.person.push.bean.db;
 
 
+import net.YeYongQuan.person.push.bean.api.restful_model.message.MessageModel;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -40,13 +41,13 @@ public class Message {
     @Column(nullable = false,updatable = false)
     private LocalDateTime  createAt = LocalDateTime.now();
 
-    @ManyToOne(optional = false)
+    @ManyToOne()
     @JoinColumn(name = "receiverGroupId")
     private Group receiverGroup;
     @Column(insertable=false, updatable=false)
     private String receiverGroupId;
 
-    @ManyToOne(optional = false)
+    @ManyToOne()
     @JoinColumn(name = "receiverId")
     private User receiver;
     @Column(insertable=false, updatable = false)
@@ -65,6 +66,31 @@ public class Message {
     @Column()
     private LocalDateTime  updateAt;
 
+
+    public Message(User sender, User receiver, MessageModel model) {
+        this.id = model.getId();
+        this.content = model.getContent();
+        this.attach = model.getAttach();
+        this.messageType = model.getReceiveType();
+
+        this.sender = sender;
+        this.receiver = receiver;
+    }
+
+
+    // 发送给群的构造函数
+    public Message(User sender, Group group, MessageModel model) {
+        this.id = model.getId();
+        this.content = model.getContent();
+        this.attach = model.getAttach();
+        this.messageType = model.getReceiveType();
+
+        this.sender = sender;
+        this.receiverGroup = group;
+    }
+
+    public Message() {
+    }
 
     public String getId() {
         return id;
