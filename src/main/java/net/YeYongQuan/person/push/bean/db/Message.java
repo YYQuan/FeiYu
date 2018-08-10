@@ -71,7 +71,7 @@ public class Message {
         this.id = model.getId();
         this.content = model.getContent();
         this.attach = model.getAttach();
-        this.messageType = model.getReceiveType();
+        this.messageType = model.getType();
 
         this.sender = sender;
         this.receiver = receiver;

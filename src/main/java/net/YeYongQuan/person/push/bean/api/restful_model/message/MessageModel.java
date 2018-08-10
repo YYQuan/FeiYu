@@ -26,7 +26,7 @@ public class MessageModel {
 
 //    发给人的还是还给 group的
     @Expose
-    private int receiveType = Message.TYPE_STR;
+    private int receiveType = Message.MSG_TYPE_USER;
 
 
     public String getId() {
