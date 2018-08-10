@@ -1,7 +1,9 @@
 package net.YeYongQuan.person.push.factory.push;
 
 import com.google.common.base.Strings;
+import net.YeYongQuan.person.push.bean.api.ModelCard.GroupMemberCard;
 import net.YeYongQuan.person.push.bean.api.ModelCard.MessageCard;
+import net.YeYongQuan.person.push.bean.api.ModelCard.UserCard;
 import net.YeYongQuan.person.push.bean.api.restful_model.base.PushModel;
 import net.YeYongQuan.person.push.bean.db.*;
 import net.YeYongQuan.person.push.factory.Group.GroupFactory;
@@ -131,4 +133,35 @@ public class PushFactory {
             }
 
     }
+
+    /**
+     *  通知 被邀请进群的 user  ，你已经被邀请进群了
+     */
+    public static void pushJoinGroup(Set<GroupMember>  members){
+
+    }
+
+    /**
+     * 通知旧成员， 有新成员加入
+     * @param oldMembers
+     * @param insertMembers
+     */
+    public static void  pushGroupMemberAdd(Set<GroupMember> oldMembers,List<GroupMemberCard> insertMembers){
+
+    }
+
+    /**
+     * 通知设备，你的账户已经在别处登录
+     */
+    public static void pushLogout(User receiver ,String oldPushId){
+
+    }
+
+    /**
+     * 通知被关注者，你被xxx关注了
+     */
+    public static void pushFollow(User receiver,User userCard){
+
+    }
+
 }
