@@ -30,13 +30,12 @@ public class GroupService extends  BaseService{
 
 
     @POST
-    @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     public ResponseModel<GroupCard>  create (GroupCreateModel model){
-        if(!GroupCreateModel.isCheck(model)){
+        if(!GroupCreateModel.check(model)){
             return ResponseModel.buildParameterError();
         }
-
         User self  = getSelf();
         model.getUsers().remove(self.getId());
 
@@ -70,7 +69,7 @@ public class GroupService extends  BaseService{
             return ResponseModel.buildServiceError();
         }
 
-        Set<GroupMember>  groupMembers = GroupFactory.getMembers(group);
+        Set<GroupMember>  groupMembers = GroupFactory.getMembers(group.getId());
 
         if(groupMembers==null){
             return ResponseModel.buildServiceError();
@@ -188,7 +187,7 @@ public class GroupService extends  BaseService{
             return  ResponseModel.buildNoPermissionError();
         }
 
-        Set<GroupMember> members = GroupFactory.getMembers(group);
+        Set<GroupMember> members = GroupFactory.getMembers(group.getId());
         if(members == null)
             return ResponseModel.buildServiceError();
 

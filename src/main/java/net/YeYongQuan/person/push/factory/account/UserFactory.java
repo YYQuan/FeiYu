@@ -7,6 +7,7 @@ import net.YeYongQuan.person.push.bean.api.restful_model.account.RegisterModel;
 import net.YeYongQuan.person.push.bean.api.restful_model.user.UserInfoModel;
 import net.YeYongQuan.person.push.bean.db.User;
 import net.YeYongQuan.person.push.bean.db.UserFollow;
+import net.YeYongQuan.person.push.factory.push.PushFactory;
 import net.YeYongQuan.person.push.utils.Hib;
 import net.YeYongQuan.person.push.utils.TextUtil;
 import org.hibernate.Session;
@@ -104,7 +105,7 @@ public class UserFactory {
 
         }else{
             if(!Strings.isNullOrEmpty(user.getPushId())){
-                //TODO  通知该账户上次登录的设备退出账户
+                PushFactory.pushLogout(user);
             }
             user.setPushId(newPushId);
             saveOrUpdate(user);

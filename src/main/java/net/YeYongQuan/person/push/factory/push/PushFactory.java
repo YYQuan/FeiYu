@@ -75,7 +75,7 @@ public class PushFactory {
                 return;
             }
 
-            Set<GroupMember>  mMembers = GroupFactory.getMembers(group);
+            Set<GroupMember>  mMembers = GroupFactory.getMembers(group.getId());
 
             if(mMembers==null || mMembers.size()<=0){
                 return;
@@ -105,7 +105,7 @@ public class PushFactory {
     }
 
     private static void groupPush(PushDispatcher dispatcher,
-                                  User sender,
+                                  User sender,/*为null则代表是系统消息*/
                                   Set<GroupMember> mMembers,
                                   List<PushHistory> list,
                                   String entity,
@@ -138,7 +138,44 @@ public class PushFactory {
      *  通知 被邀请进群的 user  ，你已经被邀请进群了
      */
     public static void pushJoinGroup(Set<GroupMember>  members){
+        PushDispatcher  dispatcher = new PushDispatcher();
 
+        List<GroupMember> list = new ArrayList<>(members);
+
+        List<PushHistory> histories = new ArrayList<>();
+        for (GroupMember member :list){
+            String userId = member.getUserId();
+            User user =  UserFactory.findUserById(userId);
+
+            if(user ==null)
+                continue;
+
+            GroupMemberCard card = new GroupMemberCard(member);
+            String entity = TextUtil.toJson(card);
+
+            PushHistory history  = new PushHistory();
+            history.setEntity(entity);
+            history.setEntityType(PushModel.ENTITY_TYPE_ADD_GROUP);
+            history.setReceiver(user);
+            history.setReceiverPushId(user.getPushId());
+
+            //系统消息 sender 为null
+//            history.setSender();
+            histories.add(history);
+
+            PushModel  model = new PushModel()
+                            .add(history.getEntityType(),history.getEntity());
+
+            dispatcher.add(user.getPushId(),model);
+        }
+
+        Hib.query(session -> {
+            for (PushHistory msg: histories){
+                session.save(msg);
+            }
+        });
+
+        dispatcher.submit();
     }
 
     /**
@@ -147,21 +184,62 @@ public class PushFactory {
      * @param insertMembers
      */
     public static void  pushGroupMemberAdd(Set<GroupMember> oldMembers,List<GroupMemberCard> insertMembers){
+        PushDispatcher  dispatcher = new PushDispatcher();
 
+        List<PushHistory>  histories = new ArrayList<>();
+
+        String entity = TextUtil.toJson(insertMembers);
+
+        groupPush(dispatcher,null,oldMembers,histories,entity,PushModel.ENTITY_TYPE_ADD_GROUP_MEMBERS);
+
+        Hib.query(session -> {
+            for(PushHistory msg :histories) {
+                session.save(msg);
+            }
+        });
+
+        dispatcher.submit();
     }
 
     /**
      * 通知设备，你的账户已经在别处登录
      */
-    public static void pushLogout(User receiver ,String oldPushId){
+    public static void pushLogout(User receiver){
+        PushHistory history = new PushHistory();
+        history.setReceiver(receiver);
+        history.setReceiverPushId(receiver.getPushId());
+        history.setEntityType(PushModel.ENTITY_TYPE_LOGOUT);
+        history.setEntity("Account logout!!!");
 
+        Hib.query(session -> {session.save(history);});
+
+        PushDispatcher dispatcher = new PushDispatcher();
+        PushModel model = new PushModel().add(history.getEntityType(),history.getEntity());
+        dispatcher.add(receiver.getId(),model);
+
+        dispatcher.submit();
     }
 
     /**
      * 通知被关注者，你被xxx关注了
      */
-    public static void pushFollow(User receiver,User userCard){
+    public static void pushFollow(User receiver,UserCard userCard){
+        userCard.setFollow(true);
+        String entity = TextUtil.toJson(userCard);
 
+        PushHistory history = new PushHistory();
+        history.setReceiver(receiver);
+        history.setReceiverPushId(receiver.getPushId());
+        history.setEntityType(PushModel.ENTITY_TYPE_ADD_FRIEND);
+        history.setEntity(entity);
+
+        Hib.query(session -> {session.save(history);});
+
+        PushDispatcher dispatcher = new PushDispatcher();
+        PushModel model = new PushModel().add(history.getEntityType(),history.getEntity());
+        dispatcher.add(receiver.getId(),model);
+
+        dispatcher.submit();
     }
 
 }

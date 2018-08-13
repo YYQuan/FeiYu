@@ -6,6 +6,7 @@ import net.YeYongQuan.person.push.bean.api.restful_model.base.ResponseModel;
 import net.YeYongQuan.person.push.bean.api.restful_model.user.UserInfoModel;
 import net.YeYongQuan.person.push.bean.db.User;
 import net.YeYongQuan.person.push.factory.account.UserFactory;
+import net.YeYongQuan.person.push.factory.push.PushFactory;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -68,8 +69,7 @@ public class UserService extends BaseService{
         User user =UserFactory.follow(self,target,null);
         UserCard  card = new UserCard( user ,true);
 
-        //TODO 后面要 通知 被关注的人
-
+        PushFactory.pushFollow(user,card);
         return ResponseModel.buildOk(card);
     }
 

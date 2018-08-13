@@ -1,6 +1,7 @@
 package net.YeYongQuan.person.push.bean.db;
 
 
+import net.YeYongQuan.person.push.bean.api.restful_model.group.GroupCreateModel;
 import org.hibernate.annotations.*;
 
 import javax.persistence.*;
@@ -51,9 +52,19 @@ public class Group {
     @OneToMany(fetch =FetchType.LAZY,cascade = CascadeType.ALL)
     private  Set<GroupMember>   members  =new HashSet<>();
 
-    @CreationTimestamp
-    @Column(nullable = false,updatable = false,insertable = false)
-    private LocalDateTime createAr = LocalDateTime.now();
+
+
+
+    public Group() {
+    }
+
+    public Group(User owner,GroupCreateModel model) {
+        this.owner = owner;
+        this.name = model.getName();
+        this.description = model.getDesc();
+        this.pic = model.getPicture();
+    }
+
     public String getId() {
         return id;
     }

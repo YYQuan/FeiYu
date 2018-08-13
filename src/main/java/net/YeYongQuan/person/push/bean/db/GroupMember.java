@@ -56,6 +56,15 @@ public class GroupMember {
     @Column(nullable = false, updatable = false, insertable = false)
     private String userId;
 
+    public GroupMember() {
+
+    }
+
+    public GroupMember(User user, Group group) {
+        this.user = user;
+        this.group = group;
+    }
+
     public String getId() {
         return id;
     }

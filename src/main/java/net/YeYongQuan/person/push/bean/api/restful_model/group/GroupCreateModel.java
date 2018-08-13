@@ -16,14 +16,6 @@ public class GroupCreateModel {
     @Expose
     private Set<String> users = new HashSet<>();
 
-    public static boolean  isCheck(GroupCreateModel model){
-        return !(Strings.isNullOrEmpty(model.name)||
-                    Strings.isNullOrEmpty(model.desc)||
-                    Strings.isNullOrEmpty(model.picture)||
-                    model.users==null ||
-                    model.users.size()<=0);
-    }
-
     public String getName() {
         return name;
     }
@@ -54,5 +46,13 @@ public class GroupCreateModel {
 
     public void setUsers(Set<String> users) {
         this.users = users;
+    }
+
+    public static boolean check(GroupCreateModel model) {
+        return !(Strings.isNullOrEmpty(model.name)
+                || Strings.isNullOrEmpty(model.desc)
+                || Strings.isNullOrEmpty(model.picture)
+                || model.users == null
+                || model.users.size() == 0);
     }
 }
