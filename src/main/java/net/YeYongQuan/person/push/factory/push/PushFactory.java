@@ -119,8 +119,10 @@ public class PushFactory {
                 history.setEntityType(entityTypeMessage);
                 history.setEntity(entity);
                 history.setReceiver(receiver);
-                history.setSenderId(sender.getId());
-                history.setSender(sender);
+                if(sender!=null) {
+                    history.setSenderId(sender.getId());
+                    history.setSender(sender);
+                }
                 // 接收者当前的设备推送Id
                 history.setReceiverPushId(receiver.getPushId());
                 list.add(history);

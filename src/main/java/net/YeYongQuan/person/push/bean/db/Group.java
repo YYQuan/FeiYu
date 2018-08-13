@@ -23,9 +23,12 @@ public class Group {
     @Column(updatable = false,nullable = false)
     private String id;
 
+    // 定义为创建时间戳，在创建时就已经写入
     @CreationTimestamp
-    @Column(nullable = false,updatable = false,insertable = false)
+    @Column(nullable = false)
     private LocalDateTime createAt = LocalDateTime.now();
+
+
 
     @Column()
     private String description;
@@ -44,9 +47,11 @@ public class Group {
     @Column(insertable=false, updatable = false)
     private String pic;
 
-    @CreationTimestamp
-    @Column(nullable = false,updatable = false,insertable = false)
+    // 定义为更新时间戳，在创建时就已经写入
+    @UpdateTimestamp
+    @Column(nullable = false)
     private LocalDateTime updateAt = LocalDateTime.now();
+
 
     @LazyCollection(LazyCollectionOption.EXTRA)
     @OneToMany(fetch =FetchType.LAZY,cascade = CascadeType.ALL)

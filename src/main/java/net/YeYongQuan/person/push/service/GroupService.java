@@ -43,7 +43,7 @@ public class GroupService extends  BaseService{
             return ResponseModel.buildParameterError();
         }
 
-        if(GroupFactory.findGroupByName(model.getName())==null){
+        if(GroupFactory.findGroupByName(model.getName())!=null){
             return ResponseModel.buildHaveNameError();
         }
 
@@ -91,7 +91,7 @@ public class GroupService extends  BaseService{
     public ResponseModel<List<GroupCard>>    searchGroup(@PathParam("name") @DefaultValue("") String name){
 
         List<Group> groups =  GroupFactory.search(name);
-        if(groups==null && groups.size()>0){
+        if(groups!=null && groups.size()>0){
             List<GroupCard> cards = groups.stream()
                                         .map(group -> {
                                             GroupMember member =  GroupFactory.getMember(getSelf().getId(),group.getId());
@@ -108,7 +108,7 @@ public class GroupService extends  BaseService{
 
     /**
      * 获取我的群 的信息
-     * @param dateStr  日期 可填   只显示某日期前加入的群的群信息
+     * @param dateStr  日期 可填   只显示某日期后加入的群的群信息
      * @return
      */
     @GET
@@ -132,8 +132,11 @@ public class GroupService extends  BaseService{
             return ResponseModel.buildOk();
 
         LocalDateTime finalDateTime = dateTime;
+
+
+        //用 filter的话有个bug ，如果 groupMembers.size()>0 但是其元素是早于finalDateTime的话， 会报null指针 ,上边判断的部分就是为了解决这个问题
         List<GroupCard> cards = groupMembers.stream()
-                                    .filter(groupMember -> finalDateTime ==null&&groupMember.getUpdateAt().isAfter(finalDateTime))
+                                    .filter(groupMember -> finalDateTime ==null||groupMember.getUpdateAt().isAfter(finalDateTime))
                                     .map(GroupCard::new)
                                     .collect(Collectors.toList());
 
@@ -249,7 +252,7 @@ public class GroupService extends  BaseService{
         }
 
         if(users.size()<=0)
-            return ResponseModel.buildServiceError();
+            return ResponseModel.buildParameterError();
 
 
         Set<GroupMember>  addGroupMember = GroupFactory.addMembers(group,users);
