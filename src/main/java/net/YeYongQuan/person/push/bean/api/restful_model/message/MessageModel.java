@@ -26,7 +26,7 @@ public class MessageModel {
 
 //    发给人的还是还给 group的
     @Expose
-    private int receiveType = Message.MSG_TYPE_USER;
+    private int receiverType = Message.MSG_TYPE_GROUP;
 
 
     public String getId() {
@@ -54,20 +54,12 @@ public class MessageModel {
     }
 
 
-    public int getMessageType() {
-        return receiveType;
-    }
-
-    public void setMessageType(int messageType) {
-        this.receiveType = messageType;
-    }
-
     public int getReceiveType() {
-        return receiveType;
+        return receiverType;
     }
 
     public void setReceiveType(int receiveType) {
-        this.receiveType = receiveType;
+        this.receiverType = receiveType;
     }
 
     public int getType() {
@@ -92,8 +84,8 @@ public class MessageModel {
                 || Strings.isNullOrEmpty(model.content)
                 || Strings.isNullOrEmpty(model.receiverId))
 
-                && (model.receiveType == Message.MSG_TYPE_USER
-                || model.receiveType == Message.MSG_TYPE_GROUP)
+                && (model.receiverType == Message.MSG_TYPE_USER
+                || model.receiverType == Message.MSG_TYPE_GROUP)
 
                 && (model.type == Message.TYPE_STR
                 || model.type == Message.TYPE_AUDIO

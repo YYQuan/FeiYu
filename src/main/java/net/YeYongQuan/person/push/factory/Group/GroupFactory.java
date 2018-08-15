@@ -74,6 +74,7 @@ public class GroupFactory {
     public static Group create(User creater, GroupCreateModel model,List<User> list){
 
         return Hib.query(session -> {
+
             Group  group  = new Group(creater,model);
             session.save(group);
 

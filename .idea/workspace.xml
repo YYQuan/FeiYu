@@ -11,10 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1db6a775-3ab3-4ea2-b3ce-43911f3a2cea" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/ModelCard/GroupMemberCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/ModelCard/GroupMemberCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/message/MessageModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/message/MessageModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/push/PushFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/push/PushFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/GroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/GroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/Group/GroupFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/Group/GroupFactory.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -52,31 +51,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GroupService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GroupService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/GroupService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="266" column="42" lean-forward="true" selection-start-line="266" selection-start-column="42" selection-end-line="266" selection-end-column="42" />
+            <state>
+              <caret column="37" selection-start-column="37" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#create#0;class#GroupService#0" />
                 <element signature="method#searchGroup#0;class#GroupService#0" />
                 <element signature="method#searchMyGroup#0;class#GroupService#0" />
                 <element signature="method#getGroupInfo#0;class#GroupService#0" />
+                <element signature="method#getGroupMember#0;class#GroupService#0" />
+                <element signature="method#addMember#0;class#GroupService#0" />
                 <element signature="docComment;method#modifyMember#0;class#GroupService#0" />
-                <element signature="docComment;method#join#0;class#GroupService#0" />
-                <element signature="e#10727#10728#0" expanded="true" />
-                <element signature="e#10754#10755#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GroupMemberCard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/ModelCard/GroupMemberCard.java">
+      <file leaf-file-name="MessageService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/MessageService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+            <state relative-caret-position="171">
+              <caret line="28" column="58" lean-forward="true" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,11 +82,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PushFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/push/PushFactory.java">
+      <file leaf-file-name="MessageModel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/message/MessageModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+            <state relative-caret-position="39">
+              <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+              <folding>
+                <element signature="e#1022#1023#0" expanded="true" />
+                <element signature="e#1056#1057#0" expanded="true" />
+                <element signature="e#1107#1108#0" expanded="true" />
+                <element signature="e#1153#1154#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Message.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,45 +109,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/account/UserFactory.java">
+      <file leaf-file-name="GroupFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/Group/GroupFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="702">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#findUserByName#0;class#UserFactory#0" />
-                <element signature="method#login#0;class#UserFactory#0" />
-                <element signature="method#register#0;class#UserFactory#0" />
-                <element signature="method#updatePushId#0;class#UserFactory#0" />
-                <element signature="method#getContact#0;class#UserFactory#0" />
-                <element signature="method#getUserFollow#0;class#UserFactory#0" />
-                <element signature="method#saveOrUpdate#0;class#UserFactory#0" />
-                <element signature="method#updateUserInfo#0;class#UserFactory#0" />
-                <element signature="method#checkUpdate#0;class#UserFactory#0" />
+                <element signature="method#getUserGroups#0;class#GroupFactory#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hib.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/utils/Hib.java">
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="83" selection-start-line="83" selection-end-line="83" />
+            <state relative-caret-position="1242">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
               <folding>
-                <element signature="e#1430#1431#0" expanded="true" />
-                <element signature="e#1487#1488#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#search#0;class#UserService#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LocalDateTime.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/time/LocalDateTime.java">
+      <file leaf-file-name="ThreadLocalSessionContext.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.9.Final/48cd5241964e6c85952626a2d197f60f415554e1/hibernate-core-5.2.9.Final-sources.jar!/org/hibernate/context/internal/ThreadLocalSessionContext.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="489" column="32" selection-start-line="489" selection-start-column="32" selection-end-line="489" selection-end-column="32" />
+            <state relative-caret-position="6642">
+              <caret line="296" selection-start-line="296" selection-end-line="296" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Group.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Group.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="999">
+              <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -142,35 +156,17 @@
       <file leaf-file-name="ResourceMethodInvocationHandlerFactory.java" pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-server/2.26-b03/bedcfdc4480e0bed601c9d918d8ddcd1e56a4546/jersey-server-2.26-b03-sources.jar!/org/glassfish/jersey/server/model/internal/ResourceMethodInvocationHandlerFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="564">
               <caret line="73" column="87" selection-start-line="73" selection-start-column="87" selection-end-line="73" selection-end-column="87" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LocalDateTimeConverter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/provider/LocalDateTimeConverter.java">
+      <file leaf-file-name="PushFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/push/PushFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractJavaResourceMethodDispatcher.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-server/2.26-b03/bedcfdc4480e0bed601c9d918d8ddcd1e56a4546/jersey-server-2.26-b03-sources.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="147" selection-start-line="147" selection-end-line="147" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GroupMemberAttendModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/group/GroupMemberAttendModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="3429">
+              <caret line="142" selection-start-line="142" selection-end-line="142" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -204,6 +200,7 @@
       <find>createQuery</find>
       <find>todo</find>
       <find>createAr</find>
+      <find>receiveType</find>
     </findStrings>
     <replaceStrings>
       <replace>LocalDateTime</replace>
@@ -615,17 +612,17 @@
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/MessageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/PushHistory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/message/MessageModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Message.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/group/GroupMemberAttendModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/GroupMember.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/Group/GroupFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/provider/GsonProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/group/GroupCreateModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Group.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/GroupService.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/push/PushFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/ModelCard/GroupMemberCard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/Group/GroupFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Group.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/GroupService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/message/MessageModel.java" />
       </list>
     </option>
   </component>
@@ -646,8 +643,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1358" />
-    <option name="y" value="-8" />
+    <option name="x" value="-398" />
+    <option name="y" value="86" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -659,7 +656,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -845,6 +841,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -1041,6 +1038,9 @@
       <workItem from="1533792573026" duration="3418000" />
       <workItem from="1533864021953" duration="16118000" />
       <workItem from="1534123973351" duration="12867000" />
+      <workItem from="1534163401336" duration="751000" />
+      <workItem from="1534215472879" duration="5295000" />
+      <workItem from="1534316391059" duration="1611000" />
     </task>
     <task id="LOCAL-00001" summary="配置好   hibernate  &amp;    jersey">
       <created>1530181636371</created>
@@ -1140,11 +1140,18 @@
       <option name="project" value="LOCAL" />
       <updated>1533897943649</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="GroupService   组操作  接口完成">
+      <created>1534163622156</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1534163622156</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171454000" />
+    <option name="totallyTimeSpent" value="179111000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1156,70 +1163,45 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.32885906" />
-      <window_info anchor="bottom" id="Application Servers" order="8" sideWeight="0.4989339" weight="0.3281075" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info id="Designer" order="3" />
-      <window_info anchor="right" id="Database" order="8" weight="0.28731343" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info id="UI Designer" order="5" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39977604" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32922733" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32922733" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32922733" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.32885906" />
+      <window_info anchor="bottom" id="Application Servers" order="8" sideWeight="0.4989339" weight="0.3281075" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.21388578" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4989339" weight="0.493841" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32922733" />
       <window_info id="Persistence" order="2" side_tool="true" />
-      <window_info content_ui="combo" x="2086" y="205" width="480" height="630" id="Project" order="0" visible="true" weight="0.21321961" />
+      <window_info id="Designer" order="3" />
+      <window_info active="true" content_ui="combo" x="2086" y="205" width="480" height="630" id="Project" order="0" visible="true" weight="0.2934947" />
       <window_info anchor="right" id="Bean Validation" order="0" />
       <window_info id="Web" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32922733" />
-      <window_info anchor="right" id="Gradle" order="7" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4989339" weight="0.493841" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" x="2086" y="205" width="480" height="630" id="Project" order="0" visible="true" weight="0.21321961" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32922733" />
-      <window_info anchor="right" id="Bean Validation" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.32885906" />
-      <window_info anchor="bottom" id="Application Servers" order="8" sideWeight="0.4989339" weight="0.3281075" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info id="Web" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info id="Image Layers" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="10" />
-      <window_info id="Persistence" order="2" side_tool="true" />
       <window_info anchor="right" id="Database" order="8" weight="0.28731343" />
+      <window_info anchor="right" id="Gradle" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="4" visible="true" weight="0.42857143" />
       <window_info id="Capture Tool" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.21388578" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32922733" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32922733" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info id="Image Layers" order="4" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.32922733" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32922733" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info id="UI Designer" order="5" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32922733" />
-      <window_info anchor="bottom" id="Debug" order="4" visible="true" weight="0.39977604" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Build" order="0" sideWeight="0.4989339" weight="0.32885906" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32922733" />
-      <window_info anchor="right" id="Gradle" order="7" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info id="Designer" order="3" />
     </layout>
     <layout-to-restore>
       <window_info id="Persistence" order="2" side_tool="true" />
@@ -1307,103 +1289,47 @@
     <MESSAGE value="推送以及发送信息接口完成" />
     <MESSAGE value="修复一些bug" />
     <MESSAGE value="GroupService  完成  ，但是GroupFactory 以及PushFactory的相关功能还没实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="GroupService  完成  ，但是GroupFactory 以及PushFactory的相关功能还没实现" />
+    <MESSAGE value="GroupService   组操作  接口完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="GroupService   组操作  接口完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/AccountService.java</url>
-          <line>67</line>
+          <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/MessageService.java</url>
+          <line>29</line>
           <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/account/UserFactory.java</url>
-          <line>149</line>
-          <properties />
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/UserService.java</url>
-          <line>57</line>
-          <properties />
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/UserService.java</url>
-          <line>55</line>
-          <properties />
-          <option name="timeStamp" value="50" />
+          <option name="timeStamp" value="119" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/MessageService.java</url>
           <line>47</line>
           <properties />
-          <option name="timeStamp" value="62" />
+          <option name="timeStamp" value="120" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/MessageService.java</url>
-          <line>70</line>
+          <line>42</line>
           <properties />
-          <option name="timeStamp" value="65" />
+          <option name="timeStamp" value="121" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/MessageService.java</url>
-          <line>59</line>
+          <line>44</line>
           <properties />
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/push/PushFactory.java</url>
-          <line>33</line>
-          <properties />
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/push/PushFactory.java</url>
-          <line>47</line>
-          <properties />
-          <option name="timeStamp" value="74" />
+          <option name="timeStamp" value="122" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/MessageService.java</url>
-          <line>33</line>
+          <line>36</line>
           <properties />
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/GroupService.java</url>
-          <line>35</line>
-          <properties />
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/GroupService.java</url>
-          <line>137</line>
-          <properties />
-          <option name="timeStamp" value="95" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/GroupService.java</url>
-          <line>133</line>
-          <properties />
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/GroupService.java</url>
-          <line>268</line>
-          <properties />
-          <option name="timeStamp" value="100" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/push/PushFactory.java</url>
-          <line>194</line>
-          <properties />
-          <option name="timeStamp" value="101" />
+          <option name="timeStamp" value="123" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="103" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="124" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1433,16 +1359,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/ModelCard/ApplyCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="43" column="36" lean-forward="true" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Apply.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
@@ -1465,10 +1381,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
           <caret line="147" column="19" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
-          <folding>
-            <element signature="e#5748#5749#0" expanded="true" />
-            <element signature="e#5784#5785#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1476,10 +1388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
-          <folding>
-            <element signature="e#1101#1102#0" expanded="true" />
-            <element signature="e#1154#1155#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1494,9 +1402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1507,26 +1412,6 @@
           <folding>
             <element signature="e#1536#1537#0" expanded="true" />
             <element signature="e#1563#1564#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/message/MessageModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1556,9 +1441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1566,14 +1448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="541">
           <caret line="62" column="11" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
-          <folding>
-            <element signature="e#2813#2814#0" expanded="true" />
-            <element signature="e#2842#2843#0" expanded="true" />
-            <element signature="e#2871#2872#0" expanded="true" />
-            <element signature="e#2898#2899#0" expanded="true" />
-            <element signature="e#2936#2937#0" expanded="true" />
-            <element signature="e#2968#2969#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1609,16 +1483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/MessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/provider/GsonProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1630,22 +1494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="93" column="37" selection-start-line="93" selection-start-column="28" selection-end-line="93" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#register#0;class#AccountService#0" />
-            <element signature="method#passwordEncryption#0;class#AccountService#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#search#0;class#UserService#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1667,10 +1515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="1148" selection-start-line="1148" selection-end-line="1148" />
-          <folding>
-            <element signature="e#25302#25303#0" expanded="true" />
-            <element signature="e#25341#25342#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1713,9 +1557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="196" selection-start-line="196" selection-end-line="196" />
-          <folding>
-            <element signature="e#7577#7594#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1730,11 +1571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="999">
           <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#848#849#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1745,31 +1581,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Group.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/Group/GroupFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getUserGroups#0;class#GroupFactory#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/utils/TextUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="50" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="e#1328#1329#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1796,42 +1611,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/provider/LocalDateTimeConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="459">
           <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/time/LocalDateTime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="10530">
           <caret line="489" column="32" selection-start-line="489" selection-start-column="32" selection-end-line="489" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/group/GroupMemberAttendModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
+        <state relative-caret-position="108">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/utils/Hib.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
+        <state relative-caret-position="1998">
           <caret line="83" selection-start-line="83" selection-end-line="83" />
-          <folding>
-            <element signature="e#1430#1431#0" expanded="true" />
-            <element signature="e#1487#1488#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/account/UserFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
+        <state relative-caret-position="810">
           <caret line="46" selection-start-line="46" selection-end-line="46" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1848,54 +1656,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-server/2.26-b03/bedcfdc4480e0bed601c9d918d8ddcd1e56a4546/jersey-server-2.26-b03-sources.jar!/org/glassfish/jersey/server/model/internal/ResourceMethodInvocationHandlerFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="73" column="87" selection-start-line="73" selection-start-column="87" selection-end-line="73" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-server/2.26-b03/bedcfdc4480e0bed601c9d918d8ddcd1e56a4546/jersey-server-2.26-b03-sources.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
+        <state relative-caret-position="2376">
           <caret line="147" selection-start-line="147" selection-end-line="147" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/push/PushFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/ModelCard/GroupMemberCard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
-          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/ModelCard/GroupMemberCard.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/push/PushFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        <state relative-caret-position="3429">
+          <caret line="142" selection-start-line="142" selection-end-line="142" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.9.Final/48cd5241964e6c85952626a2d197f60f415554e1/hibernate-core-5.2.9.Final-sources.jar!/org/hibernate/context/internal/ThreadLocalSessionContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6642">
+          <caret line="296" selection-start-line="296" selection-end-line="296" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Group.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="999">
+          <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#search#0;class#UserService#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/factory/Group/GroupFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getUserGroups#0;class#GroupFactory#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/GroupService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="266" column="42" lean-forward="true" selection-start-line="266" selection-start-column="42" selection-end-line="266" selection-end-column="42" />
+        <state>
+          <caret column="37" selection-start-column="37" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#create#0;class#GroupService#0" />
             <element signature="method#searchGroup#0;class#GroupService#0" />
             <element signature="method#searchMyGroup#0;class#GroupService#0" />
             <element signature="method#getGroupInfo#0;class#GroupService#0" />
+            <element signature="method#getGroupMember#0;class#GroupService#0" />
+            <element signature="method#addMember#0;class#GroupService#0" />
             <element signature="docComment;method#modifyMember#0;class#GroupService#0" />
-            <element signature="docComment;method#join#0;class#GroupService#0" />
-            <element signature="e#10727#10728#0" expanded="true" />
-            <element signature="e#10754#10755#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/db/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-server/2.26-b03/bedcfdc4480e0bed601c9d918d8ddcd1e56a4546/jersey-server-2.26-b03-sources.jar!/org/glassfish/jersey/server/model/internal/ResourceMethodInvocationHandlerFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="73" column="87" selection-start-line="73" selection-start-column="87" selection-end-line="73" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/service/MessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="28" column="58" lean-forward="true" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/YeYongQuan/person/push/bean/api/restful_model/message/MessageModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+          <folding>
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#1056#1057#0" expanded="true" />
+            <element signature="e#1107#1108#0" expanded="true" />
+            <element signature="e#1153#1154#0" expanded="true" />
           </folding>
         </state>
       </provider>

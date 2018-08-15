@@ -44,7 +44,7 @@ public class Group {
     @Column(insertable=false, updatable = false)
     private String ownerId;
 
-    @Column(insertable=false, updatable = false)
+    @Column(nullable = false)
     private String pic;
 
     // 定义为更新时间戳，在创建时就已经写入
